@@ -1,5 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
+import "./App.scss";
 
-const App = () => <h1>Laboratório Fantasma</h1>
+import Home from "./screens/home";
+
+
+const App = () => (
+  <Fragment>
+    <Home/>
+  </Fragment>
+);
 
 export default App;
