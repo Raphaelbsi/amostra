@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 import "./App.scss";
 
-import Home from "./screens/home";
+import Routes from './routes';
 
 
 const App = () => (
   <Fragment>
-    <Home/>
+    <Routes/>
   </Fragment>
 );
 
