@@ -7,14 +7,16 @@ import Login from "./screens/auth/login";
 import BiosIndex from "./screens/bios/index";
 import UsuarioEdit from "./screens/usuarios/edit";
 
+import PrivateRouter from './components/auth/private_route';
+
 const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/register" component={Register} />
       <Route exact path='/login' component={Login}  />
-      <Route exact path='/bios' component={BiosIndex}  />
-      <Route exact path='/usuario/edit' component={UsuarioEdit}  />
+      <PrivateRouter exact path='/bios' component={BiosIndex}  />
+      <PrivateRouter exact path='/usuario/edit' component={UsuarioEdit}  />
     </Switch>
   </BrowserRouter>
 );

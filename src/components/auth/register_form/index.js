@@ -127,12 +127,12 @@ function RegisterForm() {
                       className="button is-white has-text-custom-purple"
                       onClick={(e) => setRedirectToLogin(true)}
                     >
-                      Login or
+                      Login
                     </a>
                   </Column>
                   <Column>
                     <Button color="custom-purple" outlined>
-                      Register
+                      Registrar
                     </Button>
                   </Column>
                 </Column.Group>

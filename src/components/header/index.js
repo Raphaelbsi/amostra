@@ -41,7 +41,7 @@ function Header() {
                   to="/register"
                   className="button is-white has-text-custom-purple"
                 >
-                  Register
+                  Registrar
                 </Link>
               </Column>
               <Column>
