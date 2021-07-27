@@ -1,11 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 import HeaderLogged from "../../../components/header_logged";
+import Bios from "../../../components/bios";
 
-const Bios = () => (
+const BiosScreen = () => (
   <Fragment>
-    <HeaderLogged/>
-    Hello World
+    <HeaderLogged />
+    <Bios />
+    
   </Fragment>
 );
 
-export default Bios;
+export default BiosScreen;

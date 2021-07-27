@@ -7,17 +7,15 @@ import { Redirect, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList } from "@fortawesome/free-solid-svg-icons";
 
-
 function HeaderLogged(props) {
-    const [redirectToHome, setRedirectToHome] = useState(false);
-  
-    const logOut = async () => {
-      await UserService.logout();
-      setRedirectToHome(true);
-    }
+  const [redirectToHome, setRedirectToHome] = useState(false);
 
-    if (redirectToHome == true)
-    return <Redirect to={{ pathname: "/" }} />
+  const logOut = async () => {
+    await UserService.logout();
+    setRedirectToHome(true);
+  };
+
+  if (redirectToHome == true) return <Redirect to={{ pathname: "/" }} />;
 
   return (
     <Navbar color="custom-purple" className="navbar-logged">
@@ -29,10 +27,24 @@ function HeaderLogged(props) {
             </Link>
           </Column>
         </Column.Group>
+        <Navbar.Burger
+          className="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbar-menu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </Navbar.Burger>
       </Navbar.Brand>
 
       <Navbar.Menu>
-        <Navbar.Segment as="div" className="navbar-item navbar-end" align="right">
+        <Navbar.Segment
+          as="div"
+          className="navbar-item navbar-end"
+          align="right"
+        >
           <Navbar.Item as="div">
             <Dropdown>
               <Dropdown.Trigger>
@@ -47,7 +59,9 @@ function HeaderLogged(props) {
                   </Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item as="div">
-                    <a href="#" onClick={e => logOut()}>LogOut</a>
+                    <a href="#" onClick={(e) => logOut()}>
+                      LogOut
+                    </a>
                   </Dropdown.Item>
                 </Dropdown.Content>
               </Dropdown.Menu>
@@ -56,7 +70,7 @@ function HeaderLogged(props) {
         </Navbar.Segment>
       </Navbar.Menu>
     </Navbar>
-  )
+  );
 }
 
 export default HeaderLogged;
