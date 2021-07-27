@@ -9171,7 +9171,7 @@
     "regenerator-runtime" "^0.13.3"
     "whatwg-fetch" "^3.0.0"
 
-"react-burger-menu@^2.6.12":
+"react-burger-menu@^2.9.2":
   "integrity" "sha512-NOVV0Svjydlo8b/Twd/BQZ7WYr6T5rdVtxTsS7iESFCdQekaK8DIZt78D+qFS4eUjy8q/VQ2H3SLy/xir/NN8Q=="
   "resolved" "https://registry.yarnpkg.com/react-burger-menu/-/react-burger-menu-2.9.2.tgz"
   "version" "2.9.2"
